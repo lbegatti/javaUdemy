@@ -1,4 +1,4 @@
-public class HealthInsurancePlan {
+public abstract class HealthInsurancePlan {
     private InsuranceBrand offeredBy;
     private double coverage;
 
@@ -16,4 +16,5 @@ public class HealthInsurancePlan {
         this.coverage = coverage;
     }
 
+    public abstract double computeMonthlyPremium(double salary, int age, boolean smoking);
 }

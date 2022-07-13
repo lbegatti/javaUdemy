@@ -1,10 +1,14 @@
 public class User {
 
-    protected static long id;
-    protected static String firstName;
-    protected static String lastName;
+    protected long id;
+    private String firstName;
+    private String lastName;
     String gender;
     String email;
+    private boolean insured;
+    private HealthInsurancePlan insurancePlan;
+    private int age;
+    private boolean smoking;
     // add rest of the variables
 
     public long getId() {
@@ -47,5 +51,30 @@ public class User {
     public void setEmail(String email){
         this.email = email;
     }
+
+    // insured
+    public boolean isInsured() {
+        return insured;
+    }
+    public void setInsured(boolean insured) {
+        this.insured = insured;
+    }
+
+    // age
+    public int getAge(){return age;}
+    public void setAge(int age){this.age = age;}
+
+    // smoking
+    public boolean isSmoking(){return smoking;}
+    public void setSmoking(boolean smoking){this.smoking = smoking;}
+
+    // HealthInsurancePlan
+    public HealthInsurancePlan getInsurancePlan(){
+        return insurancePlan;
+    }
+    public void setInsurancePlan(HealthInsurancePlan insurancePlan){
+        this.insurancePlan = insurancePlan;
+    }
+
 
 }

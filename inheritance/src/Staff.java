@@ -1,9 +1,9 @@
 public class Staff extends User {
 
-    static protected long staffId;
-    static int yearsOfExperience;
-    static protected String description;
-    protected static double salary;
+    protected long staffId;
+    int yearsOfExperience;
+    protected String description;
+    protected double salary;
 
     // staffId
     public long getStaffId() {

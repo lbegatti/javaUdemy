@@ -36,14 +36,26 @@ public class Billing {
     }
 
     public static void main(String[] args) {
-        HealthInsurancePlan insurancePlan = new PlatinumPlan();
-        Patient patient = new Patient();
-        patient.setInsurancePlan(insurancePlan);
+        //HealthInsurancePlan insurancePlan = new PlatinumPlan();
+        //Patient patient = new Patient();
+        //patient.setInsurancePlan(insurancePlan);
+
+        //Staff staff = new Staff();
+        //staff.setInsurancePlan(insurancePlan);
+        //staff.setSalary(8000);
+
+        User staff = new User();
+        InsuranceBrand insuranceBrand = new BlueCrossBlueShield();
+        HealthInsurancePlan insurancePlan = new SilverPlan();
+
+        insurancePlan.setOfferedBy(insuranceBrand);
+        staff.setInsurancePlan(insurancePlan);
 
 
-        double[] payments = Billing.computePaymentAmount(patient,1000.0);
+        //double[] payments = Billing.computePaymentAmount(patient,1000.0);
 
-        System.out.println("Final payment: " + Arrays.toString(payments));
+        //System.out.println("Final payment: " + Arrays.toString(payments));
+        System.out.println("User premium is: " + insurancePlan.computeMonthlyPremium(8000,40,true));
     }
 
 }
